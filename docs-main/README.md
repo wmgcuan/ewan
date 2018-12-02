@@ -283,3 +283,7 @@ return parseInt(input)
 .option('-d,--demo', 'option test', executeDemo, 'defaultValue')
 
 defaultValue 只有在可选[i]的情况下有效
+
+download = require('download-git repo')
+download(repository, destination, options, callback)
+download(库地址, 目标文件夹, 下载时携带的参数, callback)

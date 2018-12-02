@@ -1,4 +1,4 @@
-![logo](logo-flow.png)
+![logo](docs.png)
 
 # docsify
 

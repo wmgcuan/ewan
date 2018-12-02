@@ -3,14 +3,23 @@
 var program = require('commander'),
   inquirer = require('inquirer')
 
-const choices = ['docs', '其它'] // 可安装列表
+const choices = [
+  { name: 'docs', desc: '文档支持' },
+  { name: '其它', desc: '更多的其它安装' }
+] // 可安装列表
 
 program
   .version(require('../package.json').version, '-v, --version')
   .option('-l, --list', '可安装列表')
   .action(function(options) {
-    console.log('[ewan]', options.list)
+    console.log('\n┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈')
+    choices.forEach(function(item) {
+      console.log(item.name, '▻', item.desc)
+      console.log('┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈')
+    })
+    console.log('\n \n')
   })
+  .parse(process.argv)
 
 //var pname = program.args[0]
 //if (!pname) program.help() // 如果未接收到作何参数则返回帮助信息

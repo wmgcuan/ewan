@@ -1,0 +1,31 @@
+{
+  "name": "@seahan/ewan",
+  "version": "1.0.5",
+  "description": "构建统筹",
+  "main": "index.js",
+  "bin": {
+    "ewan": "./bin/ewan.js"
+  },
+  "scripts": {
+    "serve:docs": "npm run ./node_modules/.bin/docsify -v",
+    "asd": "node -v",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "commander": "^2.19.0",
+    "docsify-cli": "^4.3.0",
+    "fs-extra": "^7.0.1",
+    "inquirer": "^6.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmgcuan/ewan.git"
+  },
+  "author": "ewan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wmgcuan/ewan/issues"
+  },
+  "homepage": "https://github.com/wmgcuan/ewan#readme"
+}

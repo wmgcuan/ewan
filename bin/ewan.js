@@ -5,6 +5,7 @@ var program = require('commander'),
 
 const choices = [
   { name: 'docs', desc: '文档支持' },
+  { name: 'rollup', desc: '--' },
   { name: '其它', desc: '更多的其它安装' }
 ] // 可安装列表
 
@@ -68,11 +69,5 @@ function selectTool() {
   })
 }
 function installTool(name) {
-  switch (name) {
-    case 'docs':
-      require('./docsify.js')()
-      break
-    default:
-      console.log('陆续推出更多的安装')
-  }
+  require('./' + name + '.js')() // 根据不同的命令转到不同的命令处理文件
 }

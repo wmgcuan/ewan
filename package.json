@@ -8,7 +8,8 @@
   },
   "scripts": {
     "serve:docs": "npm run ./node_modules/.bin/docsify -v",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run:rollup": "rollup -c"
   },
   "dependencies": {
     "bluebird": "^3.5.3",
@@ -26,5 +27,9 @@
   "bugs": {
     "url": "https://github.com/wmgcuan/ewan/issues"
   },
-  "homepage": "https://github.com/wmgcuan/ewan#readme"
+  "homepage": "https://github.com/wmgcuan/ewan#readme",
+  "devDependencies": {
+    "docsify-cli": "^4.3.0",
+    "rollup": "^0.67.4"
+  }
 }

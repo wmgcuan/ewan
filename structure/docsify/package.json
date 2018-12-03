@@ -1,0 +1,23 @@
+{
+  "name": "@seahan/docsify",
+  "version": "1.0.1",
+  "description": "docs",
+  "main": "src/index.js",
+  "scripts": {
+    "view": "./node_modules/.bin/docsify serve structure",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmgcuan/docsify.git"
+  },
+  "author": "ewan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wmgcuan/docsify/issues"
+  },
+  "homepage": "https://github.com/wmgcuan/docsify#readme",
+  "devDependencies": {
+    "docsify-cli": "^4.3.0"
+  }
+}

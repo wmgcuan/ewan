@@ -4,12 +4,6 @@ var Promise = require('bluebird'),
   download = require('download-git-repo'),
   exec = require('child_process').exec
 
-/**
- * 下载git仓库代码到指定文件夹
- * @param  {[type]} repo [description]
- * @return {[type]}      [description]
- */
-// https://api.github.com/repos/
 async function gitrepo() {
   return new Promise((resolve, reject) => {
     download('wmgcuan/docsify', root + 'structure/docsify', err => {
@@ -70,7 +64,7 @@ function generateStructure() {
           console.log(`
           △▽△▽△▽△▽△  
          △▽△▽    △▽△           
-        △▽△▽    △▽△▽  △▽ Docsify-cli@4.3.0 △▽△▽△▽△▽
+        △▽△▽    △▽△▽  △▽ DOCSIFY-CLI@4.3.0 △▽△▽△▽△▽
        △▽△▽    △▽△▽  △▽△▽  △▽△▽  △▽△▽     △▽△▽
       △▽△▽    △▽△▽  △▽△▽  △▽△▽  △▽△▽     △▽△▽△▽△▽△
      △▽△▽    △▽△▽  △▽△▽  △▽△▽  △▽△▽           △▽△▽

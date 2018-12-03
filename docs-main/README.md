@@ -1,3 +1,11 @@
+### ewan install --toolname docs
+
+### ewan install --toolname rollup
+
+1. 写入.rollup.config.js
+2. npm install rollup --save-dev
+3. 往 package.json 里写入 scripts['run:rollup'] = 'rollup -c'
+
 ### 创建[ewan]命令
 
 1. npm init

@@ -1,4 +1,18 @@
-![logo](docs.png)
+# \_coverpage.md
+
+```js
+- [Home](README.md)
+- [Docs](demo-docs.md)
+
+* Language
+  - [English](/)
+  - [中文](/zh-cn/)
+```
+
+# \_navbar.md
+
+```js
+![logo](logo-flow.png)
 
 # docsify
 
@@ -18,3 +32,10 @@
 <!-- 背景色 -->
 
 <!-- ![color](#333) -->
+```
+
+# \_sidebar.md
+
+```js
+- [README](../README.md)
+```

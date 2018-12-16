@@ -1,0 +1,11 @@
+{
+  "name": "projectname",
+  "version": "1.0.0",
+  "description": "项目描述",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ewan",
+  "license": "ISC"
+}

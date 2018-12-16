@@ -1,3 +1,39 @@
+```js
+// 仅仅执行一个shell命令，不需要获取执行结果
+child_process.spawn(command[, args][, options])
+
+// 直接执行系统指令
+require('child_process').exec('ipconfig',{
+  cwd <string> 子进程的当前工作目录。
+  env <Object> 环境变量键值对。
+  encoding <string> 默认为 'utf8'。
+  shell <string> 用于执行命令的 shell。 在 UNIX 上默认为 '/bin/sh'，在 Windows 上默认为 process.env.ComSpec。 详见 Shell Requirements 与 Default Windows Shell。
+  timeout <number> 默认为 0。
+  maxBuffer <number> stdout 或 stderr 允许的最大字节数。 默认为 200*1024。 如果超过限制，则子进程会被终止。 查看警告： maxBuffer and Unicode。
+  killSignal <string> | <integer> 默认为 'SIGTERM'。
+  uid <number> 设置该进程的用户标识。（详见 setuid(2)）
+  gid <number> 设置该进程的组标识。（详见 setgid(2)）
+  windowsHide <boolean> Hide the subprocess console window that would normally be created on Windows systems. Default: false.
+  },function (err,stdout,stderr){
+  // 脚本shell执行结果
+    if (err){
+        console.log(err);
+        return;
+    }
+    console.log('stdout'+stdout);
+    console.log('stderr'+stderr);
+})
+
+// 调用可执行文件
+child_process.execFile(file[, args][, options][, callback])
+// #! /usr/bin/env node
+// console.log('bin file')
+
+// 可以用node执行的.js文件，也不需要获取执行结果。fork出来的子进程一定是node进程
+child_process.fork(modulePath[, args][, options])
+
+```
+
 ### ewan install --toolname docs
 
 ### ewan install --toolname rollup

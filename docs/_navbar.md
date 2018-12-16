@@ -1,5 +1,9 @@
-- [Home](README.md)
-- [Docs](demo-docs.md)
+
+- [HOME](/)
+- [CLI](pages/cli.md)
+* DOCS
+  - [文档构建](pages/docs.md)
+  - [工具](pages/tools.md)
 
 * Language
   - [English](/)

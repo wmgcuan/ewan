@@ -1,7 +1,10 @@
 #! /usr/bin/env node
 
 var program = require('commander'),
-  inquirer = require('inquirer')
+  inquirer = require('inquirer'),
+  config = require('../ewan.config')
+
+require('../lib/colors')
 
 
 
@@ -20,28 +23,28 @@ program
     if (options.toolname) {
       require('./' + options.toolname + '.js')()
     } else {
-      selectTool([
-        { name: 'docs', desc: '文档支持' },
-        { name: 'rollup', desc: '--' },
-        { name: 'es6', desc: 'ES6支持' },
-        { name: '其它', desc: '更多的其它安装' }
-      ], function (name) {
+      selectTool(config.projects, function (name) {
         require('./' + name + '.js')() // 根据不同的命令转到不同的命令处理文件
       })
     }
   })
 
+/* 启动应用
+ */
 program
-  .command('serve:docs')
-  .alias('sv')
+  .command('start <name>')
   .description('启动服务')
-  .option('-t,--toolname [i]', '工具名')
-  .action(function (options) {
-    var exec = require('child_process').exec(
-      './node_modules/.bin/docsify serve docs-main'
-    )
+  .action(function (name) {
+    const project = config.projectMap[name]
+    if (!project) {
+      console.error('请输入正确的项目名')
+      console.color({ color: 'grey' }, ' > $ ewan start [name]')
+      console.color({ color: 'grey' }, ' > $ ewan map\n')
+      return
+    }
+    var exec = require('child_process').exec(project.start)
     exec.stdout.on('data', function (data) {
-      console.log('stdout: ' + data)
+      console.color({ color: 'green' }, data)
     })
   })
 
@@ -67,6 +70,8 @@ program
   })
 
 program.parse(process.argv)
+var pname = program.args[0]
+if (!pname) program.help() // 如果未接收到作何参数则返回帮助信息
 
 function selectTool (choices, handler) {
   let questions = [

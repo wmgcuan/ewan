@@ -2,7 +2,7 @@
 - [HOME](/)
 - [CLI](pages/cli.md)
 * DOCS
-  - [文档构建](pages/docs.md)
+  - [文档配置](pages/docs.md)
   - [工具](pages/tools.md)
 
 * Language

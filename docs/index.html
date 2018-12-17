@@ -22,7 +22,8 @@
 <body>
   <div id="app"></div>
   <script>
-    var baseUrl = window.location.href === 'https://wmgcuan.github.io/ewan/#/pages/docs' ? '/ewan' : '/'
+    console.log(window.location.host)
+    var baseUrl = window.location.host === 'https://wmgcuan.github.io' ? '/ewan' : '/'
     window.$docsify = {
       basePath: baseUrl,
       homepage: 'pages/README.md',

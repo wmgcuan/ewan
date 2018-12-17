@@ -22,10 +22,10 @@
 <body>
   <div id="app"></div>
   <script>
-    console.log(window.location.href)
+    var baseUrl = window.location.href === 'https://wmgcuan.github.io/ewan/#/pages/docs' ? '/ewan' : '/'
     window.$docsify = {
-      basePath: '/ewan',
-      homepage: 'README.md',
+      basePath: baseUrl,
+      homepage: 'pages/README.md',
       name: 'Cmmand Line Interface',
       repo: 'https://github.com/wmgcuan/ewan.git',
       loadSidebar: false, // _sidebar.md

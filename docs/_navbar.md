@@ -4,6 +4,7 @@
 * DOCS
   - [文档配置](pages/docs.md)
   - [工具](pages/tools.md)
+  - [工具](vue/index.md)
 
 * Language
   - [English](/)

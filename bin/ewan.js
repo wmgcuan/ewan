@@ -15,16 +15,21 @@ program
 
 
 program
-  .command('install')
+  .command('install [name]')
   .alias('i')
   .description('安装工具')
-  .option('-t,--toolname [i]', '工具名')
-  .action(function (options) {
-    if (options.toolname) {
-      require('./' + options.toolname + '.js')()
+  .action(function (name) {
+    const arr = process.cwd().split('/'),
+      len = arr.length
+    if (arr[len - 1] === 'ewan') {
+      console.error('禁止CLI结构里安装项目!')
+      return
+    }
+    if (name) {
+      require('./' + name + '.js')()
     } else {
-      selectTool(config.projects, function (name) {
-        require('./' + name + '.js')() // 根据不同的命令转到不同的命令处理文件
+      selectTool(config.projects, function (n) {
+        require('./' + n + '.js')() // 根据不同的命令转到不同的命令处理文件
       })
     }
   })
@@ -70,8 +75,8 @@ program
   })
 
 program.parse(process.argv)
-var pname = program.args[0]
-if (!pname) program.help() // 如果未接收到作何参数则返回帮助信息
+//var pname = program.args[0]
+//if (!pname) program.help() // 如果未接收到作何参数则返回帮助信息
 
 function selectTool (choices, handler) {
   let questions = [

@@ -42,7 +42,7 @@ child_process.fork(modulePath[, args][, options])
 2. npm install rollup --save-dev
 3. 往 package.json 里写入 scripts['run:rollup'] = 'rollup -c'
 
-### 创建[ewan]命令
+### 创建[ewan]命令 
 
 1. npm init
 

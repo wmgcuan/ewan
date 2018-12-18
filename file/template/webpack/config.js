@@ -17,15 +17,20 @@ module.exports = {
   root: path.resolve(__dirname, '../')
 }
 
+var support = {
+  babel: {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
 /*
 "dependencies": {
     "babel-runtime": "^6.26.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
+    
     "webpack": "^3.10.0",
     "ts-loader": "^3.2.0",
     "typescript": "^2.6.2"

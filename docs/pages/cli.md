@@ -1,3 +1,34 @@
+# 插件
+inquirer@6.2.1
+```js
+var inquirer = require('inquirer')
+
+// 问答交互
+inquirer.prompt([
+    { type: 'confirm', message: 'element-ui?', name: 'elementui', default: false },
+    { type: 'confirm', message: 'vuex module?', name: 'vuexmodule', default: false }
+  ]).then((answers) => {
+    console.log('结果为:')
+    console.log(answers)
+  })
+
+  // 单选交互
+  inquirer.prompt([
+    { type: 'list', message: 'which one do you want to select?', name: 'repo', [
+        'webpack.config.js',
+        'es5.js',
+        'es6.js',
+        'package.json',
+        '.gitignore',
+        'rollup.config.js']}
+  ]).then(answers => {
+    console.log(answers.repo) 
+  })
+```
+
+
+
+
 ```js
 // 仅仅执行一个shell命令，不需要获取执行结果
 child_process.spawn(command[, args][, options])

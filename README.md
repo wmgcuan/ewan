@@ -1,6 +1,6 @@
 # EWAN CLI
 
-> 构建一切 前端遨游 [https://wmgcuan.github.io/ewan/](https://wmgcuan.github.io/ewan/) 
+> 构建一切 前端遨游 <a href="https://wmgcuan.github.io/ewan/" target="_blank">https://wmgcuan.github.io/ewan/</a>
 
 ## 安装说明
     > npm i @seahan/ewan

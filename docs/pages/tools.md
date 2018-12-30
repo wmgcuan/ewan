@@ -73,3 +73,24 @@ curring.step(package.depend, package.create, package.body())
       (["babel-core", "^6.26.4"])
       (["babel-preset-env", "^1.7.0"])()
 ```
+
+
+# 日期格式化 `./lib/date-format.js`
+
+- 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符<br> 
+- 年(y)可以用 1-4 个占位符<br> 
+- 毫秒(S)只能用 1 个占位符(是 1-3 位的数字)<br> 
+
+```js
+// (new Date()).format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423  
+// (new Date()).format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18    
+
+require('../lib/date-format.js')()
+
+var hash = new Date().format("MMddhhmmss")
+```
+
+
+
+
+

@@ -10,10 +10,11 @@
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
   <style>
     section.cover {
-      background: linear-gradient( to left bottom,
+      /* background: linear-gradient( to left bottom,
       hsl(8, 100%, 85%) 0%,
-      hsl(116, 100%, 85%) 100%);
-      height: 60vh;
+      hsl(116, 100%, 85%) 100%) url(banner.jpg); */
+      background: url(banner.jpg)!important;
+      height: 40vh;
     }
 
     /* code {
@@ -56,10 +57,10 @@
     window.$docsify = {
       el: '#app', // 挂载元素
       basePath: baseUrl,
-      homepage: 'https://gitee.com/wanyuaning/lim/raw/master/README.md',
+      homepage: 'pages/home.md',
       name: 'EWAN CLI',
       repo: 'wmgcuan/ewan', // 仓库地址或者 username/repo 的字符串
-      loadSidebar: true, // {Boolean|String}_sidebar.md
+      loadSidebar: false, // {Boolean|String}_sidebar.md
       loadNavbar: true, // {Boolean|String}_navbar.md 可自定义加载的文件名
       coverpage: true, // {Boolean|String}_coverpage.md
       // coverpage: {

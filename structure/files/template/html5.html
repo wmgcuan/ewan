@@ -9,7 +9,51 @@
 </head>
 
 <body>
-
+  <abbr title="People's Republic of China">PRC</abbr><!-- 缩写标签 -->
 </body>
 
 </html>
+<script>
+  String.prototype.trim = function () {
+    return this.replace(/(^\s*)|(\s*$)/g, "");
+  };
+  String.prototype.trimL = function () {
+    return this.replace(/(^\s*)/g, "");
+  }
+  String.prototype.trimR = function () {
+    return this.replace(/(\s*$)/g, "");
+  }
+</script>
+<style>
+  .flex {
+    display: flex;
+    /* flex-direction: row左至右 row-reverse右至左 column由上而下 column-reverse由下而上
+     flex-wrap: nowrap不回车(水平时) wrap自动换行顶端对齐 wrap-reverse自动往上换行 */
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    /* flex-start贴紧起始 flex-end贴紧终端 center居中 space-between两端贴紧主轴分布 space-around主轴分布 */
+    align-items: stretch;
+    /* flex-start贴紧垂轴起始 flex-end贴紧垂轴终端 center居中 stretch充满垂轴 baseline文本基线对齐 */
+    align-content: stretch;
+    /* 纵轴拉伸分布 */
+  }
+
+  .flex .item {
+    /*
+    flex-grow: 0;           
+    flex-shrink: 1;          
+    flex-basis: auto */
+    flex: 0 1 auto;
+    align-self: auto;
+    order: 0;
+  }
+
+  /* 文本渐变色 */
+  .text-content {
+    background-image: -webkit-gradient(linear, left 0, right 0, from(rgb(4, 94, 170)), to(rgb(1, 152, 216)));
+    -webkit-background-clip: text;
+    /*必需加前缀 -webkit- 才支持这个text值 */
+    -webkit-text-fill-color: transparent;
+    /*text-fill-color会覆盖color所定义的字体颜色： */
+  }
+</style>

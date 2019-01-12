@@ -9,9 +9,14 @@
   */
 const proxyUrl = 'http://house.bitradex.info'
 module.exports = {
-  // 接口域名 | 是否跨域 | 匹配替换路径，如匹配‘http://localhost/’替换为proxyUrl+'/'
+  //  |  | 匹配替换路径，如匹配‘http://localhost/’替换为proxyUrl+'/'
   proxy: {
-    '/': { target: proxyUrl, changeOrigin: true, pathRewrite: { '^/': '/' } }
+    '/': {
+      target: proxyUrl, // 接口域名
+      // secure: false,  // https接口
+      changeOrigin: true, // 是否跨域
+      pathRewrite: { '^/': '/' }
+    }
     // ,'/test': { target: proxyUrl, changeOrigin: true, pathRewrite: { '^/test': '/test' }}
   },
   api: {

@@ -1,6 +1,6 @@
 {
   "name": "@seahan/ewan",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "构建统筹",
   "main": "index.js",
   "bin": {

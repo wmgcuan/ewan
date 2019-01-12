@@ -52,12 +52,24 @@ program
 			}, data)
 		})
 	})
-
+// VUE开发
 program
 	.command('vue')
 	.description('VUE开发经验')
 	.action(function () {
 		require('../src/vue.js')()
+	})
+program
+	.command('server [type]')
+	.description('创建服务')
+	.action(function (type) {
+		if (type) {
+			require('../structure/server')(type)
+		} else {
+			selectTool(config.server, function (name) {
+				require('../structure/server')(name)
+			})
+		}
 	})
 
 program
@@ -94,7 +106,7 @@ program.parse(process.argv)
 //var pname = program.args[0]
 //if (!pname) program.help() // 如果未接收到作何参数则返回帮助信息
 
-function selectTool(choices, handler) {
+function selectTool (choices, handler) {
 	let questions = [{
 		type: 'list',
 		name: 'repo',
